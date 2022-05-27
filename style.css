@@ -91,7 +91,8 @@
 
 }
 
-.task__edit:focus {
+.task__edit:focus,
+.task__add:focus {
   color: #333;
 }
 
@@ -113,10 +114,6 @@
   width: 318px;
 }
 
-.task__add:focus {
-  color: #333;
-}
-
 /* New Task */
 .task-list__type_add {
   display: block;
@@ -128,7 +125,6 @@
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -166,10 +162,7 @@
 }
 
 /* Edit Task */
-.task__edit_hiden {
-  display: none;
-}
-
+.task__edit_hiden,
 .task__desk_edit {
   display: none;
 }
