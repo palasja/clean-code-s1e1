@@ -38,14 +38,16 @@ var createNewTaskElement=function(taskString){
 
     //Each elements, needs appending
     checkBox.type="checkbox";
+    checkBox.className="task__done";
     editInput.type="text";
-    editInput.className="task__desc";
+    editInput.className="task__edit task__edit_hiden";
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-    editButton.className="task__edit";
+    editButton.className="task__btn task__btn_edit";
 
-    deleteButton.className="task__delete";
-    deleteButtonImg.src='./remove.svg';
+    deleteButton.className="task__btn btn-delete";
+    deleteButtonImg.src="./remove.svg";
+    deleteButtonImg.className="btn-delete__img";
     deleteButton.appendChild(deleteButtonImg);
 
 
@@ -85,7 +87,7 @@ var editTask=function(){
 
     var editInput=listItem.querySelector('input[type=text]');
     var label=listItem.querySelector("label");
-    var editBtn=listItem.querySelector(".task__edit");
+    var editBtn=listItem.querySelector(".task__btn_edit");
     var containsClass=listItem.classList.contains("task_change");
     //If class of the parent is .editmode
     if(containsClass){
@@ -95,11 +97,14 @@ var editTask=function(){
         label.innerText=editInput.value;
         editBtn.innerText="Edit";
     }else{
+
         editInput.value=label.innerText;
         editBtn.innerText="Save";
     }
 
     //toggle .editmode on the parent.
+    label.classList.toggle("task__desk_edit");
+    editInput.classList.toggle("task__edit_hiden");
     listItem.classList.toggle("task_change");
 };
 
@@ -157,8 +162,8 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     console.log("bind list item events");
 //select ListItems children
     var checkBox=taskListItem.querySelector("input[type=checkbox]");
-    var editButton=taskListItem.querySelector(".task__edit");
-    var deleteButton=taskListItem.querySelector(".task__delete");
+    var editButton=taskListItem.querySelector(".task__btn_edit");
+    var deleteButton=taskListItem.querySelector(".btn-delete");
 
 
     //Bind editTask to edit button.
