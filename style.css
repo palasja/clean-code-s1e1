@@ -35,7 +35,7 @@
   width: 56%;
   display: inline-block;
   vertical-align: middle;
-  flex-grow: 1
+  flex-grow: 1;
 }
 
 .task_add {
@@ -146,7 +146,7 @@
 }
 
 .task__edit {
-  width: 226px
+  width: 226px;
 }
 
 .btn-delete__img {
@@ -161,12 +161,13 @@
 
 /* Completed */
 .task__desc_complited {
-  text-decoration: line-through color: #888;
+  text-decoration: line-through;
+  color: #888;
 }
 
 /* Edit Task */
 .task__edit_hiden {
-  display: none
+  display: none;
 }
 
 .task__desk_edit {
