@@ -8,23 +8,23 @@
 </head>
 
 <body class='body'>
-  <div class="more">
+  <header class="more">
     <img class="more__img" src="./eisenhower-matrix.jpg">
     <a class="more__link" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
-  </div>
-  <div class="task-list">
-    <p id="add-task">
-      <label class="task-list__type task-list__type_add" for="new-task">Add Item</label>
-    <div class="task_add">
-      <input id="new-task" class="task__add" type="text">
-      <button class="task__btn">Add</button>
-    </div>
-    </p>
+  </header>
+  <main class="task-list">
+    <section id="add-task">
+      <h3 class="task-list__type task-list__type_add">Add Item</h3>
+      <div class="task_add">
+        <input id="new-task" class="task__add" type="text">
+        <button class="task__btn">Add</button>
+      </div>
+    </section>
     <h3 class="task-list__type">Todo</h3>
     <ul class="task-type" id="incomplete-tasks">
       <li class="task">
         <input class="task__done" type="checkbox">
-        <label class="task__desc">Pay Bills</label>
+        <p class="task__desc">Pay Bills</p>
         <input type="text" class="task__edit task__edit_hiden">
         <button class="task__btn task__btn_edit">Edit</button>
         <button class="task__btn btn-delete">
@@ -33,7 +33,7 @@
       </li>
       <li class="task task_change">
         <input class="task__done" type="checkbox">
-        <label class="task__desc task__desk_edit">Go Shopping</label>
+        <p class="task__desc task__desk_edit">Go Shopping</p>
         <input type="text" value="Go Shopping" class="task__edit">
         <button class="task__btn task__btn_edit">Save</button>
         <button class="task__btn btn-delete">
@@ -45,7 +45,7 @@
     <ul class="task-type" id="completed-tasks">
       <li class="task">
         <input class="task__done" type="checkbox" checked>
-        <label class="task__desc task__desc_complited">See the Doctor</label>
+        <p class="task__desc task__desc_complited">See the Doctor</p>
         <input type="text" class="task__edit task__edit_hiden">
         <button class="task__btn task__btn_edit">Edit</button>
         <button class="task__btn btn-delete">
@@ -53,7 +53,7 @@
         </button>
       </li>
     </ul>
-  </div>
+  </main>
   <script src="app.js"></script>
 </body>
 
