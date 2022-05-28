@@ -74,7 +74,7 @@
 }
 
 .task__edit {
-  width: 224px;
+  width: 226px;
   display: inline-block;
   vertical-align: middle;
   flex-grow: 1;
@@ -86,6 +86,7 @@
   border: 1px solid #dDd;
   background: #FFF;
   border-radius: 6px;
+  box-sizing: border-box;
   font-family: Lato, sans-serif;
   color: #888;
 
@@ -115,9 +116,15 @@
 }
 
 /* New Task */
-.task-list__type_add {
+.new-task__header {
   display: block;
   margin: 0 0 20px;
+  color: #333;
+  font-weight: 700;
+  font-size: 15px;
+  border-bottom: 2px solid #333;
+  padding: 30px 0 10px;
+  text-transform: uppercase;
 }
 
 /* Task list */
@@ -139,10 +146,7 @@
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
-}
-
-.task__edit {
-  width: 226px;
+  margin: 0;
 }
 
 .btn-delete__img {
